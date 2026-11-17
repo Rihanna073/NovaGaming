@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Gaming – Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-base="../../" data-page="contacto">
+  <div id="cabecera"></div>
+
+  <main class="contenedor">
+    <section class="portada-contacto">
+      <div>
+        <span class="etiqueta subtitulo">Soporte y ventas</span>
+        <h1>Contáctanos</h1>
+        <p>¿Tienes dudas sobre un pedido o quieres reportar un problema? Escríbenos y te responderemos en menos de 24 horas.</p>
+        <div class="botones-portada">
+          <a href="#formulario" class="boton">Escribe un mensaje</a>
+          <a href="#info" class="boton boton-borde">Ver horarios</a>
+        </div>
+      </div>
+      <div class="caja-ayuda">
+        <span class="etiqueta">Respuesta en 24h</span>
+        <h2>Tu equipo de soporte está listo para ayudarte.</h2>
+        <p>Reporta pedidos, consultas técnicas o solicita ayuda con tu cuenta.</p>
+        <div class="estadisticas">
+          <div><b>24/7</b><span>Soporte multicanal</span></div>
+          <div><b>24h</b><span>Respuesta promedio</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rejilla-contacto">
+      <form class="panel" id="formulario">
+        <h2>Escribe tu consulta</h2>
+        <p>Completa el formulario y nuestro equipo te responderá con la información que necesitas.</p>
+        <div class="columna">
+          <div class="campo"><label for="n">Nombre completo</label><input class="entrada" id="numero" placeholder="Ej. Juan Pérez" required></div>
+          <div class="campo"><label for="e">Correo electrónico</label><input class="entrada" id="entrada-email" type="email" placeholder="tucorreo@ejemplo.com" required></div>
+          <div class="campo"><label for="m">Mensaje</label><textarea class="entrada" id="mes" placeholder="Escribe tu consulta aquí..." required></textarea></div>
+        </div>
+        <div class="pie-formulario">
+          <span>Respuesta estimada: 24 horas</span>
+          <button class="boton boton-grande">Enviar mensaje</button>
+        </div>
+      </form>
+
+      <div class="panel" id="informacion">
+        <h2>Información de contacto</h2>
+        <p>Usa el canal que prefieras para consultas, soporte técnico o seguimiento de pedidos.</p>
+        <div class="columna">
+          <div class="dato-contacto"><span class="icono"><i data-icon="mail" data-size="20"></i></span><div><small>Correo</small><b>soporte@novagaming.com</b></div></div>
+          <div class="dato-contacto"><span class="icono"><i data-icon="phone" data-size="20"></i></span><div><small>Teléfono</small><b>+51 987 654 321</b></div></div>
+          <div class="dato-contacto"><span class="icono"><i data-icon="clock" data-size="20"></i></span><div><small>Horario de atención</small><b>Lun - Sáb, 9:00 - 20:00</b></div></div>
+          <div class="dato-contacto"><span class="icono"><i data-icon="pin" data-size="20"></i></span><div><small>Dirección</small><b>Av. Ejercito 123, Arequipa, Perú</b></div></div>
+        </div>
+        <div class="enlaces-sociales">
+          <b>Síguenos</b>
+          <div><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Discord</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="pie"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    // Demo: no hay servidor, solo confirmamos el envío
+    document.getElementById("formulario").addEventListener("submit", (e) => {
+      e.preventDefault();
+      e.target.reset();
+      alert("¡Gracias! Recibimos tu mensaje y te responderemos en menos de 24 horas.");
+    });
+  </script>
+</body>
+</html>

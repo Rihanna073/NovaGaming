@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Gaming – Carrito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-base="../../" data-page="carrito">
+  <div id="cabecera"></div>
+
+  <main class="contenedor">
+    <div class="encabezado-pagina"><h1>Tu Carrito</h1></div>
+
+    <div class="diseno-carrito">
+      <div class="lista-carrito" id="lista-carrito"></div>
+
+      <aside class="panel resumen">
+        <h2>Resumen del pedido</h2>
+        <div class="fila-resumen"><span>Subtotal</span><b id="subtotal"></b></div>
+        <div class="fila-resumen"><span>Envío</span><b id="envio"></b></div>
+        <div class="total-resumen"><span>Total</span><span id="total"></span></div>
+        <a href="checkout.html" class="boton boton-grande boton-ancho" id="boton-pagar">Finalizar compra</a>
+      </aside>
+    </div>
+  </main>
+
+  <div id="pie"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/cart.js"></script>
+</body>
+</html>

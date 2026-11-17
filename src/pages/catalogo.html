@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Gaming – Catálogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-base="../../" data-page="catalogo">
+  <div id="cabecera"></div>
+
+  <main class="contenedor">
+    <div class="encabezado-pagina">
+      <div class="migas"><a href="../../index.html">Inicio</a> &nbsp;/&nbsp; Catálogo</div>
+      <h1>Encuentra tu próxima partida</h1>
+      <p>Explora nuestros juegos y elige cómo quieres jugar.</p>
+    </div>
+
+    <div class="herramientas">
+      <label class="buscador">
+        <i data-icon="search" data-size="20"></i>
+        <input type="search" id="busqueda" placeholder="Buscar por nombre de juego...">
+      </label>
+      <select class="ordenar" id="orden">
+        <option value="recommended">Ordenar por: Recomendados</option>
+        <option value="price-asc">Ordenar por: Precio menor</option>
+        <option value="price-desc">Ordenar por: Precio mayor</option>
+        <option value="name">Ordenar por: Nombre</option>
+      </select>
+    </div>
+
+    <div class="catalogo">
+      <aside class="filtros">
+        <div class="panel">
+          <div class="titulo-filtros"><h2>Filtros</h2><i data-icon="sliders"></i></div>
+
+          <div class="grupo-filtro" id="filtro-plataforma">
+            <h3>Plataforma</h3>
+          </div>
+          <div class="separador"></div>
+          <div class="grupo-filtro" id="filtro-genero">
+            <h3>Género</h3>
+          </div>
+          <div class="separador"></div>
+          <button class="reiniciar" id="reiniciar">Restablecer filtros</button>
+        </div>
+
+        <div class="tarjeta-envio">
+          <i data-icon="truck" data-size="24"></i>
+          <b>Tu siguiente nivel, sin costo de envío</b>
+          <p>Envío gratis en compras + S/ 200.</p>
+        </div>
+      </aside>
+
+      <section>
+        <div class="barra-resultados"><b id="contador"></b><span id="filtros-activos"></span></div>
+        <div class="rejilla-juegos juegos" id="juegos"></div>
+        <p class="nota-final">Estás viendo todos los juegos de nuestro catálogo.</p>
+      </section>
+    </div>
+  </main>
+
+  <div id="pie"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Gaming – Compra confirmada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-base="../../" data-page="carrito">
+  <div id="cabecera"></div>
+
+  <main class="contenedor">
+    <div class="encabezado-pagina"><div class="migas"><a href="../../index.html">Inicio</a> / <a href="carrito.html">Carrito</a> / Confirmación de compra</div></div>
+
+    <section class="exito">
+      <div class="icono-exito"><i data-icon="check" data-size="38"></i></div>
+      <div class="texto-exito">
+        <small>Pago confirmado</small>
+        <h1>¡Gracias por tu compra!</h1>
+        <p>Te enviamos un correo con los detalles de tu pedido.</p>
+      </div>
+      <div class="referencia-pedido"><small>Número de pedido</small><b id="numero-pedido"></b><small id="fecha-pedido"></small></div>
+    </section>
+
+    <div class="diseno-confirmacion">
+      <div>
+        <section class="panel">
+          <h2>Resumen de tu compra</h2>
+          <div class="titulo-panel"><span id="unidades"></span><span class="pagado">Pago confirmado</span></div>
+          <div class="lista-corta" id="lista-corta"></div>
+          <div class="fila-resumen"><span>Subtotal</span><b id="subtotal"></b></div>
+          <div class="fila-resumen"><span>Envío</span><b id="envio"></b></div>
+          <div class="total-resumen" style="margin-bottom:0"><span>Total pagado</span><span id="total"></span></div>
+        </section>
+        <div class="fila-botones">
+          <a href="cuenta.html" class="boton"><i data-icon="package"></i>Ver pedido</a>
+          <a href="catalogo.html" class="boton boton-borde">Seguir comprando</a>
+          <a href="#" class="enlace" onclick="window.print();return false"><i data-icon="download" data-size="16"></i> Descargar comprobante</a>
+        </div>
+      </div>
+
+      <div class="lado-confirmacion">
+        <section class="panel">
+          <h2>Entrega</h2>
+          <div class="linea-info"><i data-icon="pin" data-size="20"></i><div><b id="quien"></b><span id="direccion"></span><br><span id="telefono"></span></div></div>
+          <div class="separador" style="margin:16px 0"></div>
+          <div class="linea-info" style="margin:0"><i data-icon="truck" data-size="20"></i><div><b>Envío estándar</b><span>Llega en 2 a 4 días hábiles</span></div></div>
+        </section>
+        <section class="panel">
+          <h2>Pago</h2>
+          <div class="linea-info" style="margin:0"><i data-icon="card" data-size="20"></i><div><b>Tarjeta de crédito o débito</b><span id="titular-tarjeta"></span></div></div>
+        </section>
+        <div class="ayuda">
+          <i data-icon="headset" data-size="24"></i>
+          <div><b>¿Necesitas ayuda con tu pedido?</b><small>soporte@novagaming.com</small><small>+51 987 654 321</small></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="titulo" style="font-size:22px;margin-bottom:20px">Siguientes pasos</h2>
+    <div class="rejilla-juegos siguientes-pasos">
+      <div class="panel"><i data-icon="mailcheck" data-size="24"></i><h3>Revisa tu correo</h3><p>Te enviamos la confirmación y el comprobante de pago.</p></div>
+      <div class="panel"><i data-icon="package" data-size="24"></i><h3>Preparamos tu pedido</h3><p>Empaquetamos tus juegos y los entregamos al courier.</p></div>
+      <div class="panel"><i data-icon="truck" data-size="24"></i><h3>Recíbelo en casa</h3><p>Te avisaremos cuando tu pedido esté en camino.</p></div>
+    </div>
+  </main>
+
+  <div id="pie"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/confirmation.js"></script>
+</body>
+</html>

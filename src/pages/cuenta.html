@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Gaming – Mi cuenta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-base="../../" data-page="cuenta">
+  <div id="cabecera"></div>
+
+  <main class="contenedor">
+    <div class="encabezado-pagina">
+      <div class="migas"><a href="../../index.html">Inicio</a> / Mi cuenta</div>
+      <h1>Mi cuenta</h1>
+      <p>Administra tus datos personales y revisa tus pedidos.</p>
+    </div>
+
+    <div class="diseno-cuenta">
+      <aside class="menu-cuenta">
+        <div class="panel">
+          <div class="perfil">
+            <div class="foto-perfil">LR</div>
+            <b>Lucía Ramos</b>
+            <small>Cliente desde marzo de 2026</small>
+          </div>
+          <nav class="menu">
+            <a href="#" class="activo"><i data-icon="dashboard"></i>Resumen</a>
+            <a href="#perfil"><i data-icon="user"></i>Perfil</a>
+            <a href="#pedidos"><i data-icon="package"></i>Pedidos</a>
+            <a href="#perfil"><i data-icon="pin"></i>Direcciones</a>
+            <a href="#perfil"><i data-icon="shield"></i>Seguridad</a>
+          </nav>
+          <a href="login.html" class="salir"><i data-icon="logout"></i>Cerrar sesión</a>
+        </div>
+        <div class="tarjeta-envio">
+          <i data-icon="headset" data-size="24"></i>
+          <b>Soporte</b>
+          <p>soporte@novagaming.com</p>
+          <a href="contacto.html" class="enlace">Contactar soporte</a>
+        </div>
+      </aside>
+
+      <div class="contenido-cuenta">
+        <div class="fila-info" id="perfil">
+          <form class="panel" onsubmit="event.preventDefault();alert('Cambios guardados')">
+            <h2>Información personal</h2>
+            <div class="fila-formulario" style="margin-bottom:20px">
+              <div class="campo"><label>Nombres</label><input class="entrada" value="Lucía"></div>
+              <div class="campo"><label>Apellidos</label><input class="entrada" value="Ramos"></div>
+            </div>
+            <div class="fila-formulario" style="margin-bottom:20px">
+              <div class="campo"><label>Correo electrónico</label><input class="entrada" type="email" value="lucia@ejemplo.com"></div>
+              <div class="campo"><label>Teléfono</label><input class="entrada" value="+51 987 654 321"></div>
+            </div>
+            <div class="pie-panel"><small>Tus datos están protegidos.</small><button class="boton">Guardar cambios</button></div>
+          </form>
+
+          <div class="panel direccion">
+            <i data-icon="pin" data-size="24" class="resaltado"></i>
+            <h2>Dirección predeterminada</h2>
+            <p><b>Lucía Ramos</b></p>
+            <p>Av. Ejercito 123, Yanahuara, Arequipa</p>
+            <p>Referencia: frente al parque</p>
+            <a href="#" class="enlace">Editar dirección</a>
+          </div>
+        </div>
+
+        <section id="pedidos">
+          <div class="titulo-historial">
+            <div><h2>Historial de pedidos</h2><small>3 pedidos realizados</small></div>
+            <select class="ordenar"><option>Últimos 6 meses</option><option>Último año</option></select>
+          </div>
+
+          <article class="pedido">
+            <div class="inicio-pedido">
+              <div><b>Pedido #NG-482915</b><small>28 de octubre de 2026 · 4 artículos</small></div>
+              <span class="etiqueta">En camino</span>
+            </div>
+            <div class="elemento-linea"><div class="portada"><img src="../../assets/images/nova-strike.jpg" alt=""></div><div class="informacion"><b>Nova Strike</b><small>Cantidad: 1 · S/ 129.90</small></div><span class="monto">S/ 129.90</span></div>
+            <div class="elemento-linea"><div class="portada"><img src="../../assets/images/shadow-realms.jpg" alt=""></div><div class="informacion"><b>Shadow Realms</b><small>Cantidad: 2 · S/ 129.90</small></div><span class="monto">S/ 259.80</span></div>
+            <div class="elemento-linea"><div class="portada"><img src="../../assets/images/cyber-arena.jpg" alt=""></div><div class="informacion"><b>Cyber Arena</b><small>Cantidad: 1 · S/ 149.90</small></div><span class="monto">S/ 149.90</span></div>
+            <div class="final-pedido">
+              <div><small>Subtotal S/ 539.60 · Envío gratis</small><b>Total S/ 539.60</b><small>Entrega estimada: 2 de noviembre</small></div>
+              <a href="#" class="boton"><i data-icon="truck"></i>Seguir pedido</a>
+            </div>
+          </article>
+
+          <a href="#" class="anterior">
+            <div class="portada"><img src="../../assets/images/pixel-rush.jpg" alt=""></div>
+            <div class="crecer"><b>Pedido #NG-451207</b><small>12 de septiembre de 2026</small></div>
+            <div class="crecer"><b>Pixel Rush</b><small>S/ 99.90</small></div>
+            <span class="etiqueta etiqueta-oscura">Entregado</span>
+            <div class="total">S/ 99.90<small>Tarjeta</small></div>
+            <i data-icon="right"></i>
+          </a>
+          <a href="#" class="anterior">
+            <div class="portada"><img src="../../assets/images/cyber-arena.jpg" alt=""></div>
+            <div class="crecer"><b>Pedido #NG-430118</b><small>3 de agosto de 2026</small></div>
+            <div class="crecer"><b>Cyber Arena</b><small>S/ 149.90</small></div>
+            <span class="etiqueta etiqueta-oscura">Entregado</span>
+            <div class="total">S/ 149.90<small>Tarjeta</small></div>
+            <i data-icon="right"></i>
+          </a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div id="pie"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

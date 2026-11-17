@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Gaming – Finalizar compra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-base="../../" data-page="carrito">
+  <div id="cabecera"></div>
+
+  <main class="contenedor">
+    <div class="encabezado-pagina">
+      <div class="migas"><a href="../../index.html">Inicio</a> / <a href="carrito.html">Carrito</a> / Finalizar compra</div>
+      <h1>Finalizar compra</h1>
+      <p>Completa tus datos para recibir tu pedido.</p>
+    </div>
+
+    <div class="pasos">
+      <span class="terminado"><i data-icon="check" data-size="20"></i>Carrito</span>
+      <span class="linea"></span>
+      <span class="actual">Datos y pago</span>
+      <span class="linea"></span>
+      <span>Confirmación</span>
+    </div>
+
+    <form class="diseno-pago" id="formulario-pago">
+      <div class="formularios-pago">
+        <section class="panel">
+          <div class="titulo-seccion"><span class="numero-paso">1</span><h2>Tus datos</h2></div>
+          <div class="fila-formulario">
+            <div class="campo"><label for="nombre">Nombres</label><input class="entrada" id="nombre" placeholder="Ej. Lucía" required></div>
+            <div class="campo"><label for="apellido">Apellidos</label><input class="entrada" id="apellido" placeholder="Ej. Ramos" required></div>
+          </div>
+          <div class="fila-formulario">
+            <div class="campo"><label for="correo">Correo electrónico</label><input class="entrada" id="correo" type="email" placeholder="tucorreo@ejemplo.com" required></div>
+            <div class="campo"><label for="tel">Teléfono</label><input class="entrada" id="telefono-contacto" placeholder="+51 987 654 321" required></div>
+          </div>
+          <p class="nota">Usaremos esta información para contactarte sobre tu pedido.</p>
+        </section>
+
+        <section class="panel">
+          <div class="titulo-seccion"><span class="numero-paso">2</span><h2>Envío</h2></div>
+          <label class="opcion" style="margin-bottom:20px">
+            <input type="radio" name="envio" checked>
+            <span><b>Envío estándar</b><small>Entrega en 2 a 4 días hábiles</small></span>
+            <span class="costo" id="costo-envio">Gratis</span>
+          </label>
+          <div class="campo"><label for="dir">Dirección de entrega</label><input class="entrada" id="direccion-envio" placeholder="Calle, número y referencia" required></div>
+          <div class="fila-formulario" style="grid-template-columns:repeat(3,1fr)">
+            <div class="campo"><label for="dep">Departamento</label><select class="entrada" id="departamento"><option>Arequipa</option><option>Lima</option><option>Cusco</option></select></div>
+            <div class="campo"><label for="prov">Provincia</label><select class="entrada" id="provincia"><option>Arequipa</option><option>Lima</option><option>Cusco</option></select></div>
+            <div class="campo"><label for="dist">Distrito</label><select class="entrada" id="distrito"><option>Cercado</option><option>Yanahuara</option><option>Cayma</option></select></div>
+          </div>
+          <div class="campo"><label for="ref">Referencia (opcional)</label><input class="entrada" id="referencia" placeholder="Ej. Frente al parque"></div>
+        </section>
+
+        <section class="panel">
+          <div class="titulo-seccion"><span class="numero-paso">3</span><h2>Método de pago</h2></div>
+          <div class="fila-opcion">
+            <label class="opcion"><input type="radio" name="pago" checked>Tarjeta de crédito o débito</label>
+            <label class="opcion"><input type="radio" name="pago">Billetera digital</label>
+          </div>
+          <div class="fila-formulario">
+            <div class="campo"><label for="tarjeta">Número de tarjeta</label><input class="entrada" id="tarjeta" inputmode="numeric" placeholder="0000 0000 0000 0000"></div>
+            <div class="campo"><label for="titular">Nombre del titular</label><input class="entrada" id="titular" placeholder="Como aparece en la tarjeta"></div>
+          </div>
+          <div class="fila-formulario">
+            <div class="campo"><label for="venc">Vencimiento</label><input class="entrada" id="vencimiento" placeholder="MM/AA"></div>
+            <div class="campo"><label for="cvv">CVV</label><input class="entrada" id="cvv" type="password" inputmode="numeric" placeholder="•••"></div>
+          </div>
+          <p class="nota"><i data-icon="shield" data-size="16"></i>Tus datos se protegen con cifrado seguro.</p>
+        </section>
+      </div>
+
+      <div>
+        <aside class="panel">
+          <h2>Resumen del pedido</h2>
+          <div class="titulo-panel" style="margin:0"><span id="cantidad-productos"></span><a href="carrito.html" class="enlace">Editar carrito</a></div>
+          <div class="lista-corta" id="lista-corta"></div>
+          <div class="fila-resumen"><span>Subtotal</span><b id="subtotal"></b></div>
+          <div class="fila-resumen"><span>Envío</span><b id="envio"></b></div>
+          <div class="total-resumen"><span>Total</span><span id="total"></span></div>
+          <p class="nota" style="margin-bottom:0">Precios en soles (PEN) con IGV incluido.</p>
+          <label class="condiciones"><input type="checkbox" required>Acepto los términos y condiciones y la política de privacidad.</label>
+          <button class="boton boton-grande boton-ancho"><i data-icon="lock"></i>Pagar ahora</button>
+          <p class="nota-demo">Demostración: no se realizará ningún cobro real.</p>
+        </aside>
+
+        <div class="ayuda">
+          <i data-icon="headset" data-size="24"></i>
+          <div><b>¿Necesitas ayuda?</b><small>soporte@novagaming.com</small><small>+51 987 654 321</small></div>
+        </div>
+        <a href="carrito.html" class="enlace" style="display:inline-flex;gap:8px;margin-top:20px"><i data-icon="back" data-size="16"></i>Volver al carrito</a>
+      </div>
+    </form>
+  </main>
+
+  <div id="pie"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>
